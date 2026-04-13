@@ -1,0 +1,122 @@
+# .cursorrules — TaskMaster Pro
+
+## General Behavior
+
+* Act as a senior backend engineer and software architect.
+* Always prioritize clean, maintainable, and production-ready code.
+* Avoid quick hacks or shortcuts.
+* Prefer clarity over cleverness.
+
+---
+
+## Architecture Rules
+
+* Follow Clean Architecture strictly:
+
+  * Controllers → handle HTTP only
+  * Services (Use Cases) → contain business logic
+  * Repositories → handle data access only
+  * Models/Entities → define data structures
+* Never mix responsibilities between layers.
+* Do NOT put business logic inside controllers.
+
+---
+
+## Tech Stack Constraints
+
+* Use Node.js with Express
+* Use TypeScript with strict typing
+* Use Prisma as ORM
+* Use SQLite as database
+* Use Zod for validation
+* Use Jest for testing
+
+Do not introduce alternative technologies unless explicitly asked.
+
+---
+
+## Code Quality
+
+* Follow SOLID principles
+* Use meaningful and consistent naming
+* Write modular, reusable functions
+* Avoid duplication (DRY principle)
+* Keep functions small and focused
+
+---
+
+## Business Logic Rules
+
+* Validate all inputs using Zod
+* Do not trust external data
+* Handle all edge cases
+* Implement filtering logic in services, not controllers
+* Return consistent JSON responses
+
+---
+
+## What to Avoid
+
+* No inline database queries in controllers
+* No large monolithic files
+* No untyped variables (avoid `any`)
+* No hardcoded values
+* No silent failures (always handle errors)
+
+---
+
+## Error Handling
+
+* Use a global error handling middleware
+* Always return proper HTTP status codes
+* Include meaningful error messages
+* Never expose sensitive internal details
+
+---
+
+## Testing
+
+* Write unit tests for services
+* Mock repositories when testing
+* Do not skip critical test cases
+
+---
+
+## Documentation
+
+* Add comments only when necessary
+* Keep code self-explanatory
+* Generate README when requested
+
+---
+
+## Output Style
+
+* Generate code step by step
+* Explain briefly, do not over-explain
+* Ensure all code is runnable
+* Prefer complete implementations over pseudo-code
+
+---
+
+## Project Structure
+
+Always follow this structure:
+
+src/
+├── controllers/
+├── services/
+├── repositories/
+├── routes/
+├── middlewares/
+├── models/
+├── config/
+└── app.ts
+
+---
+
+## Mindset
+
+* Think like a backend architect, not a beginner
+* Optimize for scalability and maintainability
+* Assume this project will grow in the future
